@@ -49,13 +49,13 @@ class Jekyll::Thumbnail < Liquid::Tag
         # puts ENV.inspect
 
         # don't generate images in preview mode whenever possible
-        if ENV['OCTOPRESS_ENV'] == 'preview' && /(?<width>\d+)?x(?<height>\d+)?/ =~ dimensions
-          html = "<img src='#{source}' style='"
-          html << "max-width: #{width}px; " unless width.nil? || width.empty?
-          html << "max-height: #{height}px;" unless height.nil? || height.empty?
-          html << "' />"
-          return html
-        end
+        # if ENV['OCTOPRESS_ENV'] == 'preview' && /(?<width>\d+)?x(?<height>\d+)?/ =~ dimensions
+        #   html = "<img src='#{source}' style='"
+        #   html << "max-width: #{width}px; " unless width.nil? || width.empty?
+        #   html << "max-height: #{height}px;" unless height.nil? || height.empty?
+        #   html << "' />"
+        #   return html
+        # end
 
         puts "Thumbnailing #{source} to #{dest} (#{dimensions})"
 
