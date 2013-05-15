@@ -65,7 +65,11 @@ class Jekyll::Thumbnail < Liquid::Tag
         image.write dest_path
       end
 
-      """<img src='#{dest}' />"""
+#      """<img src='#{dest}' />"""
+
+      """<a href='#{source}' rel='prettyPhoto' title=''><img src='#{dest}'/></a>"""
+
+
 
       # TODO support relative paths
     else
